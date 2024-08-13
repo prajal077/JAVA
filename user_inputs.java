@@ -5,11 +5,11 @@ public class user_inputs {
         int a = 0;
         int b = 0;
         System.out.println("Enter the Number A: ");
-        a = sc.nextInt(); //nextint scans the Interger
+        a = sc.nextInt(); //nextInt scans the Interger
         System.out.println("Enter the Number B: ");
         b = sc.nextInt();
         int sum = a+b;
-        System.out.println("The sum of A and B is: ");
-        System.out.println(sum);
+        System.out.println("The sum of A and B is: " +sum);
+       // System.out.println(sum);
     }
 }
