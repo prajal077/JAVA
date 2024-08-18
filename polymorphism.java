@@ -13,3 +13,6 @@ public class polymorphism {
         System.out.println(operation.multiply(2.4f, 2.5f));
     }
 }
+
+
+//This is compile time polymorphism
