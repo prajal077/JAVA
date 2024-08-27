@@ -12,7 +12,7 @@ public class CopyContentFromFileToFile {
             }
         }
         catch (Exception e) {
-            System.out.println("There is an error");
+            System.out.println("There might be an error");
         }
     }
 }
