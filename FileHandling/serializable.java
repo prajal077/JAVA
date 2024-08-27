@@ -19,11 +19,11 @@ public class serializable {
             ObjectOutputStream oos = new ObjectOutputStream(fout);
 
             oos.writeObject(info);
-            System.out.println("Object written in file successfullyy");
+            System.out.println("Object written in file successfullyyy");
         }
 
         catch (Exception e) {
-            System.out.println("There is an error");
+            System.out.println("There might be an error");
         }
     }
 }
