@@ -13,7 +13,7 @@ public class Ques_5 {
 
     public static void CheckNun (int num) throws MyCheckedException{
         if(num>100) {
-            throw new MyCheckedException("invalid numberrrrrr");
+            throw new MyCheckedException("invalid numberrrrrrr");
         }
     }
 
