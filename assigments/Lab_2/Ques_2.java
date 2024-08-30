@@ -2,21 +2,21 @@ package assigments.Lab_2;
 
 //Multiple inheritance
 
-interface X {
+interface Parent1 {
     void show1();
 }
 
-interface Y {
+interface Parent2 {
     void show2 ();
 }
 
-class Child implements X, Y {
+class Child implements Parent1, Parent2 {
     public void show1 () {
-        System.out.println("This is method of class X");
+        System.out.println("This is method of class Parent1");
     }
 
     public void show2 () {
-        System.out.println("This is method of class Y");
+        System.out.println("This is method of class Parent2");
     }
 
 }

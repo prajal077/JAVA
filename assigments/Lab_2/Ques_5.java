@@ -11,7 +11,7 @@ class MyCheckedException extends Exception {
 
 public class Ques_5 {
 
-    public static void CheckNun (int num) throws MyCheckedException{
+    public static void CheckNum (int num) throws MyCheckedException{
         if(num>100) {
             throw new MyCheckedException("invalid numberrrrrrr");
         }
@@ -23,7 +23,7 @@ public class Ques_5 {
         int num = sc.nextInt();
 
         try {
-            CheckNun(num);
+            CheckNum(num);
         }
         catch (MyCheckedException e) {
             System.out.println(e.getMessage());
