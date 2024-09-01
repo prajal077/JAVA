@@ -1,77 +1,79 @@
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
-public class Swing {
+public class SwingExample extends JFrame {
 
-    public static void main(String[] args) {
-        // Create a frame
-        JFrame frame = new JFrame("Swing Example");
-        frame.setSize(400, 400);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(null);
+    // Constructor to set up the frame
+    public SwingExample() {
+        setTitle("Swing Example");
+        setSize(400, 450);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(null);
+        initializeComponents();
+    }
 
+    // Method to initialize and add components to the frame
+    private void initializeComponents() {
         // JLabel
         JLabel label = new JLabel("Enter your details:");
         label.setBounds(20, 20, 150, 20);
-        frame.add(label);
+        add(label);
 
         // JTextField
         JTextField textField = new JTextField();
         textField.setBounds(150, 20, 150, 20);
-        frame.add(textField);
+        add(textField);
 
         // JPasswordField
         JPasswordField passwordField = new JPasswordField();
-        passwordField.setBounds(150, 50, 150, 20);
-        frame.add(passwordField);
-
-        // JButton
-        JButton button = new JButton("Submit");
-        button.setBounds(150, 80, 100, 30);
-        frame.add(button);
+        passwordField.setBounds(150, 60, 150, 20);
+        add(passwordField);
 
         // JCheckBox
         JCheckBox checkBox = new JCheckBox("I agree to the terms");
-        checkBox.setBounds(150, 120, 200, 20);
-        frame.add(checkBox);
+        checkBox.setBounds(150, 100, 200, 20);
+        add(checkBox);
 
         // JRadioButton
         JRadioButton maleButton = new JRadioButton("Male");
-        maleButton.setBounds(150, 150, 70, 20);
+        maleButton.setBounds(150, 130, 70, 20);
         JRadioButton femaleButton = new JRadioButton("Female");
-        femaleButton.setBounds(220, 150, 80, 20);
+        femaleButton.setBounds(220, 130, 80, 20);
         ButtonGroup genderGroup = new ButtonGroup();
         genderGroup.add(maleButton);
         genderGroup.add(femaleButton);
-        frame.add(maleButton);
-        frame.add(femaleButton);
+        add(maleButton);
+        add(femaleButton);
 
         // JList
         String[] countries = {"India", "USA", "UK", "Australia"};
         JList<String> countryList = new JList<>(countries);
-        countryList.setBounds(150, 180, 100, 60);
-        frame.add(countryList);
+        countryList.setBounds(150, 160, 100, 60);
+        add(countryList);
 
         // JTextArea
         JTextArea textArea = new JTextArea("Comments");
-        textArea.setBounds(150, 250, 150, 60);
-        frame.add(textArea);
+        textArea.setBounds(150, 230, 150, 60);
+        add(textArea);
 
-        // ActionListener for JButton
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String details = "Name: " + textField.getText() +
-                        "\nPassword: " + new String(passwordField.getPassword()) +
-                        "\nGender: " + (maleButton.isSelected() ? "Male" : "Female") +
-                        "\nCountry: " + countryList.getSelectedValue() +
-                        "\nComments: " + textArea.getText();
-                JOptionPane.showMessageDialog(frame, details);
-            }
+        // JButton - Submit button moved to the bottom
+        JButton button = new JButton("Submit");
+        button.setBounds(150, 310, 100, 30);
+        add(button);
+
+        // Add ActionListener to JButton using lambda expression
+        button.addActionListener(e -> {
+            String details = "Name: " + textField.getText() +
+                    "\nPassword: " + new String(passwordField.getPassword()) +
+                    "\nGender: " + (maleButton.isSelected() ? "Male" : "Female") +
+                    "\nCountry: " + countryList.getSelectedValue() +
+                    "\nComments: " + textArea.getText();
+            JOptionPane.showMessageDialog(this, details);
         });
+    }
 
-        // Set the frame visibility to true
+    public static void main(String[] args) {
+        // Create and display the frame
+        SwingExample frame = new SwingExample();
         frame.setVisible(true);
     }
 }
