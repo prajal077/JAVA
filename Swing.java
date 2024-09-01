@@ -1,9 +1,9 @@
 import javax.swing.*;
 
-public class SwingExample extends JFrame {
+public class Swing extends JFrame {
 
     // Constructor to set up the frame
-    public SwingExample() {
+    public Swing() {
         setTitle("Swing Example");
         setSize(400, 450);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -73,7 +73,7 @@ public class SwingExample extends JFrame {
 
     public static void main(String[] args) {
         // Create and display the frame
-        SwingExample frame = new SwingExample();
+        Swing frame = new Swing();
         frame.setVisible(true);
     }
 }
