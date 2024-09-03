@@ -2,9 +2,9 @@ package LayoutManagers;
 
 import javax.swing.*;
 import java.awt.*;
-
-class GridLayoutExample {  // Renamed the class here to avoid conflict
-    GridLayoutExample() {
+import java.security.PublicKey;
+class Gridlayoutt {
+    Gridlayoutt () {
         JFrame j = new JFrame();
 
         JButton b1 = new JButton("1");
@@ -29,15 +29,15 @@ class GridLayoutExample {  // Renamed the class here to avoid conflict
         j.add(b9);
         j.add(b10);
 
-        j.setLayout(new GridLayout());  // Specify 5 rows and 2 columns
+        j.setLayout(new GridLayout(3, 3, 20, 30));  // Specify 5 rows and 2 columns
 
         j.setSize(400, 400);
         j.setVisible(true);
     }
 }
 
-public class GridLayoutExampleTest {  // Renamed the class here
-    public static void main(String[] args) {
-        GridLayoutExample example = new GridLayoutExample();  // Corrected object creation
+public class Gridlayout_with_rows_colums_HGAP_VGAP {
+    public static void main(String [] args) {
+        Gridlayoutt gl = new Gridlayoutt();
     }
 }
