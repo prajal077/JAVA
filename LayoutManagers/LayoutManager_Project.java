@@ -18,6 +18,22 @@ class Layout {
         ButtonGroup accountTypeGroup = new ButtonGroup();
         accountTypeGroup.add(PersonalAccount);
         accountTypeGroup.add(BusinessAccount);
+        j.add(PersonalAccount);
+        j.add(BusinessAccount);
+
+
+        JLabel FirstNameLabel = new JLabel("First Name *");
+        JTextField FirstNameField = new JTextField(15);
+        JLabel LastNameLabel = new JLabel("Last Name *");
+        JTextField LastNameField = new JTextField(15);
+
+
+        JLabel countryLabel = new JLabel("Country/Region *");
+        JComboBox<String> countryDropdown = new JComboBox<>(new String[]{"United States", "Canada", "Other"});
+
+
+
+
 
 
 
