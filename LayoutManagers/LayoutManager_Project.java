@@ -31,6 +31,19 @@ class Layout {
         JLabel countryLabel = new JLabel("Country/Region *");
         JComboBox<String> countryDropdown = new JComboBox<>(new String[]{"United States", "Canada", "Other"});
 
+        JLabel streetAddressLabel = new JLabel("Street Address *");
+        JTextField streetAddressField = new JTextField(15);
+
+        JLabel streetAddress2Label = new JLabel("Street Address 2");
+        JTextField streetAddress2Field = new JTextField(15);
+
+        JLabel cityLabel = new JLabel("City *");
+        JTextField cityField = new JTextField(15);
+
+        JLabel stateLabel = new JLabel("State/Province *");
+        JComboBox<String> stateDropdown = new JComboBox<>(new String[]{"Select State or Province", "California", "Texas", "New York"});
+
+
 
 
 
