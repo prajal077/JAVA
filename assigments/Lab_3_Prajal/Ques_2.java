@@ -5,7 +5,7 @@ public class Ques_2 {
 
             try {
                 int [] nums = {1, 2, 3, 4};
-                System.out.println(nums[3]);
+                System.out.println(nums[10]);
             }
             catch (Exception e) {
                 System.out.println("There is an error");
