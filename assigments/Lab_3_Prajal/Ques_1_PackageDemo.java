@@ -5,7 +5,7 @@ package assigments.Lab_3_Prajal;
 
 class PackageDemo {
     public PackageDemo () {
-        System.out.println("This is Package Demo class");
+        System.out.println("This is PackageDemo class");
     }
 }
 
