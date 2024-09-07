@@ -37,7 +37,7 @@ public class Ques_4 {
         } catch (Exception e) {
             System.out.println("Error writing to file: " + e.getMessage());
         }
-        
+
         try (FileInputStream fin = new FileInputStream("filee.txt");
              ObjectInputStream ois = new ObjectInputStream(fin)) {
 
