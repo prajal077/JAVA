@@ -18,7 +18,6 @@ public class Ques_4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        // Writing user information to file
         try (FileOutputStream fout = new FileOutputStream("filee.txt");
              ObjectOutputStream oos = new ObjectOutputStream(fout)) {
 
@@ -31,15 +30,14 @@ public class Ques_4 {
                 System.out.println("Enter the address:");
                 String address = sc.nextLine();
 
-                User info = new User(id, name, address);  // Create new User object
+                User info = new User(id, name, address);
                 oos.writeObject(info);
             }
             System.out.println("Objects written successfully.");
         } catch (Exception e) {
             System.out.println("Error writing to file: " + e.getMessage());
         }
-
-        // Reading user information from file
+        
         try (FileInputStream fin = new FileInputStream("filee.txt");
              ObjectInputStream ois = new ObjectInputStream(fin)) {
 
