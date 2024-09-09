@@ -1,5 +1,5 @@
 package EventHandling;
-
+//WAP to create 2 textFields and take input from the user. When user clicks the button, display the sum of the input in new textField.
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
