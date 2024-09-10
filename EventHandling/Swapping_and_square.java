@@ -31,16 +31,21 @@ public class Swapping_and_square {
         ActionListener act = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int temp;
-                int num1 = Integer.parseInt(t1.getText());
-                int num2 = Integer.parseInt(t2.getText());
+                try {
 
-                temp = num1;
-                num1 = num2;
-                num2 = temp;
+                    int temp;
+                    int num1 = Integer.parseInt(t1.getText());
+                    int num2 = Integer.parseInt(t2.getText());
 
-                t1.setText(String.valueOf(num1));
-                t2.setText(String.valueOf(num2));
+                    temp = num1;
+                    num1 = num2;
+                    num2 = temp;
+
+                    t1.setText(String.valueOf(num1));
+                    t2.setText(String.valueOf(num2));
+                }catch (Exception ex) {
+                    JOptionPane.showMessageDialog(jfr, "Please enter valid numbers!", "Input Error", JOptionPane.ERROR_MESSAGE);
+                }
             }
         };
         b1.addActionListener(act);
@@ -49,14 +54,20 @@ public class Swapping_and_square {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                int sq1 = Integer.parseInt(t1.getText());
-                int sq2 = Integer.parseInt(t2.getText());
+                try {
 
-                sq1 = sq1*sq1;
-                sq2 = sq1*sq2;
 
-                t1.setText(String.valueOf(sq1));
-                t2.setText(String.valueOf(sq2));
+                    int sq1 = Integer.parseInt(t1.getText());
+                    int sq2 = Integer.parseInt(t2.getText());
+
+                    sq1 = sq1 * sq1;
+                    sq2 = sq2 * sq2;
+
+                    t1.setText(String.valueOf(sq1));
+                    t2.setText(String.valueOf(sq2));
+                }catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(jfr, "Please enter valid numbers!", "Input Error", JOptionPane.ERROR_MESSAGE);
+                }
             }
         };
         b2.addActionListener(sqr);
