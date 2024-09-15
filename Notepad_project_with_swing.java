@@ -54,6 +54,15 @@ public class Notepad_project_with_swing {
 
         j.add(scrollPane, BorderLayout.CENTER); // Add the scroll pane to the center of the frame
 
+
+        textArea.setBackground(Color.WHITE); // Notepad uses a white background
+        textArea.setForeground(Color.BLACK); // Black text color
+
+        // You can also set the font to make it look like Notepad (Monospaced font)
+        textArea.setFont(new Font("Consolas", Font.PLAIN, 16));
+
+        j.add(scrollPane, BorderLayout.CENTER); // Add the scroll pane to the center of the frame
+
         j.setVisible(true);
     }
 }
