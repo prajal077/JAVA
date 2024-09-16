@@ -1,3 +1,7 @@
+
+//Write a program to show thread synchronization on method sayHello() of class
+//MySharedResource.illustrate using 3 threads
+
 class MySharedResource {
     // Synchronized method to ensure only one thread accesses this at a time
     public synchronized void sayHello(String threadName) {
