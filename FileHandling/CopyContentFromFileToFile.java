@@ -8,6 +8,7 @@ public class CopyContentFromFileToFile {
         try (FileOutputStream fout = new FileOutputStream("copy.txt"); FileInputStream fin = new FileInputStream("file.txt")) {
             int i;
             while( (i = fin.read())!= -1) {
+                fout.write(i);
                 System.out.print((char)i);
             }
         }
