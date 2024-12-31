@@ -28,6 +28,9 @@ public class Swing_Addition {
         JButton clear = new JButton("Clear");
         j.add(clear);
 
+        JButton exit = new JButton("Exit");
+        j.add(exit);
+
         add.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -44,6 +47,13 @@ public class Swing_Addition {
                 num1.setText(" ");
                 num2.setText(" ");
                 result.setText("");
+            }
+        });
+
+        exit.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
             }
         });
         j.setVisible(true);
